@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lugares Turísticos en Uruguay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Open Sans', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+
+        header {
+            background-color: #0077c8;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+
+        nav {
+            margin-top: 15px;
+        }
+
+        .grid-item a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1rem;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .grid-item a:hover {
+            background-color: #003f6b;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .tab-button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #0077c8;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .tab-button.active {
+            background-color: #005a9c;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+        }
+
+        .tab-content.active {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+        }
+
+        .card-content {
+            padding: 15px;
+        }
+
+        .card-content h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #005a9c;
+        }
+
+        .card-content p {
+            margin: 10px 0 0;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            background-color: #003f6b;
+            color: white;
+            margin-top: 20px;
+        }
+	</style>
+</head>
+<body>
+    <header>
+        <h1>Bienvenidos a Uruguay</h1>
+   <nav> 
+    <section class="grid-container">
+        <div class="grid-item">
+            <a href="index.html">Inicio</a>
+        </div>
+        <div class="grid-item">
+            <a href="cultura.html">Cultura</a>
+        </div>
+        <div class="grid-item">
+            <a href="gastronomia.html">Gastronomía</a>
+        </div>
+        <div class="grid-item">
+            <a href="alojamiento.html">Alojamiento</a>
+        </div>
+		<div class="grid-item">
+            <a href="merchandising.html">Merchandising</a>
+        </div>
+    </section>
+		   </nav>
+</header>
+	
+    <section>
+        <h2 style="text-align: center;">Explora los mejores destinos de Uruguay</h2>
+        <p style="text-align: center;">Selecciona una categoría para descubrir lugares turísticos increíbles.</p>
+
+        <!-- Pestañas -->
+        <div class="tabs">
+            <button class="tab-button active" data-tab="montevideo">Pasear por Montevideo</button>
+            <button class="tab-button" data-tab="playas">Playas</button>
+            <button class="tab-button" data-tab="campo">Campo</button>
+            <button class="tab-button" data-tab="departamentos">Departamentos</button>
+        </div>
+
+        <!-- Contenido: Montevideo -->
+        <div id="montevideo" class="tab-content active">
+            <div class="card">
+                <img src="imagenes/rambla.jpg" alt="Rambla">
+                <div class="card-content">
+                    <h3>Rambla</h3>
+                    <p>Un paseo icónico junto al Río de la Plata.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/teatrosolis.jpg" alt="Teatro Solís">
+                <div class="card-content">
+                    <h3>Teatro Solís</h3>
+                    <p>El teatro más emblemático de Uruguay.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/parque-rodo.jpg" alt="Parque Rodó">
+                <div class="card-content">
+                    <h3>Parque Rodó</h3>
+                    <p>Espacio verde para disfrutar en familia.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/estadio.jpg" alt="Estadio Centenario">
+                <div class="card-content">
+                    <h3>Estadio Centenario</h3>
+                    <p>Monumento histórico del fútbol mundial.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/museoblanes.jpg" alt="Museo Blanes">
+                <div class="card-content">
+                    <h3>Museo Blanes</h3>
+                    <p>Arte nacional rodeado de un jardín japonés.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido: Playas -->
+        <div id="playas" class="tab-content">
+            <div class="card">
+                <img src="imagenes/punta-del-este.jpg" alt="Punta del Este">
+                <div class="card-content">
+                    <h3>Punta del Este</h3>
+                    <p>Playas paradisíacas y vida nocturna.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/cabopolonio.jpg" alt="Cabo Polonio">
+                <div class="card-content">
+                    <h3>Cabo Polonio</h3>
+                    <p>Naturaleza y tranquilidad únicas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/piriapolis.jpg" alt="Piriápolis">
+                <div class="card-content">
+                    <h3>Piriápolis</h3>
+                    <p>Balneario con cerros y playas encantadoras.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/aguas-dulces.jpg" alt="Aguas Dulces">
+                <div class="card-content">
+                    <h3>Aguas Dulces</h3>
+                    <p>Un balneario pintoresco y tranquilo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/laguna-merin.jpg" alt="Laguna Merín">
+                <div class="card-content">
+                    <h3>Laguna Merín</h3>
+                    <p>Destino ideal para ecoturismo y actividades acúaticas como Kitesurf.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido: Campo -->
+        <div id="campo" class="tab-content">
+            <div class="card">
+                <img src="imagenes/tacuarembo.jpg" alt="Tacuarembó">
+                <div class="card-content">
+                    <h3>Tacuarembó</h3>
+                    <p>Tradición y música criolla.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/estancias.jpg" alt="Estancias">
+                <div class="card-content">
+                    <h3>Estancias</h3>
+                    <p>Cabalgatas y fiestas criollas.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/durazno.jpg" alt="Durazno Rural">
+                <div class="card-content">
+                    <h3>Durazno Rural</h3>
+                    <p>Experiencia auténtica en el campo.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/villaserrana.jpg" alt="Villa Serrana">
+                <div class="card-content">
+                    <h3>Villa Serrana</h3>
+                    <p>Senderismo en un entorno natural único.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/cerro-artigas.jpg" alt="Cerro Artigas">
+                <div class="card-content">
+                    <h3>Cerro Artigas</h3>
+                    <p>Mirador panorámico con historia.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contenido: Departamentos -->
+        <div id="departamentos" class="tab-content">
+            <div class="card">
+                <img src="imagenes/colonia.jpg" alt="Colonia del Sacramento">
+                <div class="card-content">
+                    <h3>Colonia del Sacramento</h3>
+                    <p>Calles empedradas y encanto histórico.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/salto.jpg" alt="Salto">
+                <div class="card-content">
+                    <h3>Salto</h3>
+                    <p>Aguas termales y relax garantizado.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/rocha.jpg" alt="Rocha">
+                <div class="card-content">
+                    <h3>Rocha</h3>
+                    <p>Playas y naturaleza en su máximo esplendor.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/maldonado.jpg" alt="Maldonado">
+                <div class="card-content">
+                    <h3>Maldonado</h3>
+                    <p>Aventura y cultura junto al mar.</p>
+                </div>
+            </div>
+            <div class="card">
+                <img src="imagenes/paysandu.jpg" alt="Paysandú">
+                <div class="card-content">
+                    <h3>Paysandú</h3>
+                    <p>Riqueza cultural y paisajes únicos.</p>
+                </div>
+            </div>
+        </div>
+	</section>
+
+    <footer>
+        <p>&copy; 2025 Turismo en Uruguay. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const tabButtons = document.querySelectorAll('.tab-button');
+        const tabContents = document.querySelectorAll('.tab-content');
+
+        tabButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                tabButtons.forEach(btn => btn.classList.remove('active'));
+                button.classList.add('active');
+
+                const target = button.dataset.tab;
+                tabContents.forEach(content => content.classList.remove('active'));
+                document.getElementById(target).classList.add('active');
+            });
+        });
+    </script>
+</body>
+</html>

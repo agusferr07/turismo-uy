@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<link href="style.css" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alojamientos en Uruguay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .accommodation-category {
+            display: flex;
+            align-items: flex-start;
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .carousel {
+            position: relative;
+            width: 300px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 8px;
+        }
+
+        .carousel img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            position: absolute;
+        }
+
+        .carousel img.active {
+            display: block;
+        }
+
+        .accommodation-category-content {
+            max-width: 600px;
+        }
+
+        .accommodation-category-content h3 {
+            font-size: 1.8rem;
+            color: #0077c8; /* Azul principal */
+            margin-bottom: 10px;
+        }
+
+        .accommodation-category-content p, .accommodation-category-content ul {
+            color: #555; /* Texto gris oscuro */
+        }
+		
+		        .whatsapp-link a {
+            display: inline-block;
+            background-color: #25D366;
+            color: white;
+            font-size: 0.9em; /* Tamaño reducido */
+            font-weight: bold;
+            text-decoration: none;
+            padding: 5px 15px; /* Tamaño compacto */
+            border-radius: 4px;
+        }
+
+        .whatsapp-link a:hover {
+            background-color: #1DA851;
+        }
+		
+		.title-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+		
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Alojamientos en Uruguay</h1>
+      <nav> 
+    <section class="grid-container">
+        <div class="grid-item">
+            <a href="index.html">Inicio</a>
+        </div>
+        <div class="grid-item">
+            <a href="cultura.html">Cultura</a>
+        </div>
+        <div class="grid-item">
+            <a href="lugaresturisticos.html">Lugares turísticos</a>
+        </div>
+        <div class="grid-item">
+            <a href="gastronomia.html">Gastronomía</a>
+        </div>
+		<div class="grid-item">
+            <a href="merchandising.html">Merchandising</a>
+        </div>
+    </section>
+		   </nav>
+</header>
+    </header>
+
+    <section>		
+	    <div class="title-container">
+        <h2>Alojamientos recomendados</h2>
+		<div class="whatsapp-link">
+                <a href="https://wa.me/+59899130220" target="_blank">📞 Contáctanos por WhatsApp</a>
+            </div>
+		</div>
+        <p>Descubre opciones de apartamentos en Montevideo y alojamientos en Laguna Merín, Cerro Largo. Escoge el lugar perfecto para tu estadía.</p>
+
+        <!-- Apartamento en Montevideo 1 -->
+        <div class="accommodation-category">
+            <div class="carousel" id="carousel-montevideo-1">
+                <img src="imagenes/montevideo1-1.jpg" alt="Apartamento Montevideo 1 - Habitación" class="active">
+                <img src="imagenes/montevideo1-2.jpg" alt="Apartamento Montevideo 1 - Sala">
+                <img src="imagenes/montevideo1-3.jpg" alt="Apartamento Montevideo 1 - Cocina">
+                <img src="imagenes/montevideo1-4.jpg" alt="Apartamento Montevideo 1 - Parrillero">
+                <img src="imagenes/montevideo1-5.jpg" alt="Apartamento Montevideo 1 - Baño">
+				 <img src="imagenes/montevideo1-6.jpg" alt="Apartamento Montevideo 1 - Balcon">
+            </div>
+            <div class="accommodation-category-content">
+                <h3>🏙️ Penthouse en Montevideo - Centro</h3>
+                <p>Este apartamento moderno ubicado en el la Plaza Cagancha, el centro de la ciudad,  ofrece comodidad y una vista increíble.</p>
+                <ul>
+                    <li>Capacidad: hasta 4 personas.</li>
+                    <li>Incluye todas las comodidades, WiFi, cocina equipada, balcón, aire acondicionado  y parrillero.</li>
+                    <li>Al rededor de restaurantes y lugares históricos.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Apartamento en Montevideo 2 -->
+        <div class="accommodation-category">
+            <div class="carousel" id="carousel-montevideo-2">
+                <img src="imagenes/montevideo2-1.jpg" alt="Apartamento Montevideo 2 - Sala" class="active">
+                <img src="imagenes/montevideo2-2.jpg" alt="Apartamento Montevideo 2 - Cocina">
+                <img src="imagenes/montevideo2-3.jpg" alt="Apartamento Montevideo 2 - Habitación">
+                <img src="imagenes/montevideo2-4.jpg" alt="Apartamento Montevideo 2 - Dormitorio">
+                <img src="imagenes/montevideo2-5.jpg" alt="Apartamento Montevideo 2 - Baño">
+				<img src="imagenes/montevideo2-6.jpg" alt="Apartamento Montevideo 2 - Pasillo">
+            </div>
+            <div class="accommodation-category-content">
+                <h3>🏙️ Apartamento en Montevideo - Centro</h3>
+                <p> Apartamento ideal para disfrutar del barrio más vibrante y turístico de Montevideo.</p>
+                <ul>
+                    <li>Capacidad: hasta 12 personas.</li>
+                    <li>Incluye todas las comodidades.</li>
+                    <li>Cercano a la rambla y zonas comerciales.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Alojamiento en Laguna Merín 1 -->
+        <div class="accommodation-category">
+            <div class="carousel" id="carousel-merin-1">
+                <img src="imagenes/merin1-1.jpg" alt="Alojamiento Laguna Merín 1 - Habitación" class="active">
+                <img src="imagenes/merin1-2.jpg" alt="Alojamiento Laguna Merín 1 - Cocina">
+                <img src="imagenes/merin1-3.jpg" alt="Alojamiento Laguna Merín 1 - Baño">
+                <img src="imagenes/merin1-4.jpg" alt="Alojamiento Laguna Merín 1 - Jardín">
+                <img src="imagenes/merin1-5.jpg" alt="Alojamiento Laguna Merín 1 - Sala">
+            </div>
+            <div class="accommodation-category-content">
+                <h3>🏞️ Casa con piscina en Laguna Merín</h3>
+                <p>Una acogedora casa rodeada de naturaleza, perfecta para desconectarte y disfrutar de la tranquilidad de la laguna.</p>
+                <ul>
+                    <li>Capacidad: hasta 4 personas.</li>
+                    <li>Incluye wifi, aire acondicionado, cocina, amplio jardín y muchas comodidades.</li>
+                    <li>A pocos pasos de la laguna para actividades acuáticas como Kitesurf.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Alojamiento en Laguna Merín 2 -->
+        <div class="accommodation-category">
+            <div class="carousel" id="carousel-merin-2">
+                <img src="imagenes/merin2-1.jpg" alt="Alojamiento Laguna Merín 2 - Frente" class="active">
+                <img src="imagenes/merin2-2.jpg" alt="Alojamiento Laguna Merín 2 - Piscina">
+                <img src="imagenes/merin2-3.jpg" alt="Alojamiento Laguna Merín 2 - Habitación">
+                <img src="imagenes/merin2-4.jpg" alt="Alojamiento Laguna Merín 2 - Dormitorio">
+                <img src="imagenes/merin2-5.jpg" alt="Alojamiento Laguna Merín 2 - Living">
+				<img src="imagenes/merin2-6.jpg" alt="Alojamiento Laguna Merín 2 - Patio">
+            </div>
+            <div class="accommodation-category-content">
+                <h3>🏞️ Cabaña en Laguna Merín</h3>
+                <p>Casa espaciosa con vista a la laguna, ideal para familia que buscan una experiencia única en Cerro Largo.</p>
+                <ul>
+                    <li>Capacidad: hasta 6 personas.</li>
+                    <li>Incluye, piscina, WiFi, aire acondicionado, lavarropas,y muchas mas comodidades y muchas .</li>
+                    <li>A cuadras de la playa.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+				<footer>
+        <p>&copy; 2025 Turismo en Uruguay. Todos los derechos reservados.</p>
+ </footer>
+
+    <script>
+        // Función para manejar el carrusel de imágenes
+        function setupCarousel(carouselId) {
+            const carousel = document.getElementById(carouselId);
+            const images = carousel.querySelectorAll('img');
+            let currentIndex = 0;
+
+            setInterval(() => {
+                images[currentIndex].classList.remove('active');
+                currentIndex = (currentIndex + 1) % images.length;
+                images[currentIndex].classList.add('active');
+            }, 3000); // Cambia cada 3 segundos
+        }
+
+        // Configurar cada carrusel con 6 imágenes
+        setupCarousel('carousel-montevideo-1');
+        setupCarousel('carousel-montevideo-2');
+        setupCarousel('carousel-merin-1');
+        setupCarousel('carousel-merin-2');
+    </script>
+</body>
+</html>

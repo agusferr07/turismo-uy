@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gastronomía de Uruguay</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link href="style.css" rel="stylesheet">
+    <style>
+        .slider-container {
+            width: 60%;
+            margin: 20px auto;
+            border: 2px solid #0077c8;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slider-image {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+        }
+
+        .slider-text {
+            position: absolute;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            width: 100%;
+            padding: 15px 20px; /* Espaciado uniforme en ambos lados */
+            text-align: center;
+            font-size: 1.2rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-sizing: border-box; /* Asegura que el padding no afecte el tamaño total */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Gastronomía de Uruguay</h1>
+          <nav> 
+    <section class="grid-container">
+        <div class="grid-item">
+            <a href="index.html">Inicio</a>
+        </div>
+        <div class="grid-item">
+            <a href="cultura.html">Cultura</a>
+        </div>
+        <div class="grid-item">
+            <a href="lugaresturisticos.html">Lugares turísticos</a>
+        </div>
+        <div class="grid-item">
+            <a href="alojamiento.html">Alojamiento</a>
+        </div>
+		<div class="grid-item">
+            <a href="merchandising.html">Merchandising</a>
+        </div>
+    </section>
+		   </nav>
+</header>
+    </header>
+    <!-- Introducción -->
+    <section>
+        <h2>Descubre los Sabores de Uruguay</h2>
+        <p>La gastronomía uruguaya es una mezcla de tradición y modernidad, influenciada por las culturas europeas y criollas. Desde el inigualable asado hasta el dulce de leche, cada plato cuenta una historia única.</p>
+    </section>
+
+    <!-- Platos Típicos -->
+    <section>
+        <h3>Platos Típicos</h3>
+        <div class="slider-container">
+            <img id="slider-image-platos" class="slider-image" src="imagenes/Asado_Uruguay.jpg" alt="Asado">
+            <div id="slider-text-platos" class="slider-text">El asado: la comida típica uruguaya por excelencia</div>
+        </div>
+    </section>
+
+    <!-- Bebidas Destacadas -->
+    <section>
+        <h3>Bebidas Destacadas</h3>
+        <div class="slider-container">
+            <img id="slider-image-bebidas" class="slider-image" src="imagenes/Mate_Uruguay.jpg" alt="Mate">
+            <div id="slider-text-bebidas" class="slider-text">El mate: símbolo de amistad y tradición en Uruguay</div>
+        </div>
+    </section>
+<h2>
+  <a href="https://www.tripadvisor.com.ar/Restaurants-g294064-Uruguay.html" 
+     target="_blank" 
+     rel="noopener noreferrer"
+     style="color:#0077c8;text-decoration:underline;cursor:pointer;"
+	 position: relative;>
+    Los mejores restaurantes de Uruguay
+  </a>
+</h2>
+    <footer>
+        <p>&copy; 2025 Turismo en Uruguay. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Datos para Platos Típicos
+        const platos = [
+            {
+                imagen: "imagenes/Asado_Uruguay.jpg",
+                texto: "El asado: la comida típica uruguaya por excelencia"
+            },
+            {
+                imagen: "imagenes/chivito.jpg",
+                texto: "El chivito: el sándwich más famoso de Uruguay"
+            },
+            {
+                imagen: "imagenes/Tortas_fritas.jpg",
+                texto: "Tortas fritas: perfectas para acompañar un mate"
+            },
+            {
+                imagen: "imagenes/dulce.jpg",
+                texto: "Dulce de leche: el favorito de los postres uruguayos"
+            },
+            {
+                imagen: "imagenes/Alfajor_Uruguay.jpg",
+                texto: "Alfajor: galletas rellenas de dulce de leche y cubiertas de chocolate"
+            },
+			{
+                imagen: "imagenes/napo.jpg",
+                texto: "Milanesa: De carne o pollo, napolitana o a veces con huevo frito."
+            },
+			{
+                imagen: "imagenes/arroz.jpg",
+                texto: "Arroz con leche: Postre tradicional con canela y ralladura de limón."
+            },
+			{
+                imagen: "imagenes/pastafrola.jpg",
+                texto: "Pastafrola:Tarta dulce rellena de membrillo, batata o dulce de leche.."
+            }
+        ];
+
+        // Datos para Bebidas Destacadas
+        const bebidas = [
+            {
+                imagen: "imagenes/Mate_Uruguay.jpg",
+                texto: "El mate: símbolo de amistad y tradición en Uruguay"
+            },
+            {
+                imagen: "imagenes/Tannat_wine.jpg",
+                texto: "Vino Tannat: perfecto para acompañar un asado"
+            },
+			 {
+                imagen: "imagenes/grappa.jpg",
+                texto: "Grappa con miel: Licor fuerte y dulce, típico del invierno."
+            },
+			{
+                imagen: "imagenes/medio.jpg",
+                texto: "Medio y medio: Bebida tradicional del Mercado del Puerto, mezcla de vino blanco seco y espumante."
+            },
+			{
+                imagen: "imagenes/medio.jpg",
+                texto: "Medio y medio: Bebida tradicional del Mercado del Puerto, mezcla de vino blanco seco y espumante."
+            }
+        ];
+
+        let currentPlatoIndex = 0;
+        let currentBebidaIndex = 0;
+
+        // Función para cambiar Platos Típicos
+        function cambiarPlato() {
+            currentPlatoIndex = (currentPlatoIndex + 1) % platos.length;
+            document.getElementById('slider-image-platos').src = platos[currentPlatoIndex].imagen;
+            document.getElementById('slider-text-platos').textContent = platos[currentPlatoIndex].texto;
+        }
+
+        // Función para cambiar Bebidas Destacadas
+        function cambiarBebida() {
+            currentBebidaIndex = (currentBebidaIndex + 1) % bebidas.length;
+            document.getElementById('slider-image-bebidas').src = bebidas[currentBebidaIndex].imagen;
+            document.getElementById('slider-text-bebidas').textContent = bebidas[currentBebidaIndex].texto;
+        }
+
+        // Cambiar automáticamente cada 5 segundos
+        setInterval(cambiarPlato, 5000);
+        setInterval(cambiarBebida, 5000);
+    </script>
+</body>
+</html>

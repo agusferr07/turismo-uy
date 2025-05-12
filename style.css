@@ -1,0 +1,137 @@
+/* General */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 0;
+}
+
+/* Encabezado */
+header {
+    background-color: #0077c8; /* Azul uruguayo */
+    color: white;
+    padding: 1.5em 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.5em;
+    margin: 0;
+}
+
+nav {
+    margin-top: 1em;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 1em;
+    font-weight: 600;
+    font-size: 1em;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Secciones */
+section {
+    max-width: 800px;
+    margin: 2em auto;
+    background: white;
+    padding: 2em;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+h2, h3 {
+    font-family: 'Lora', serif;
+    color: #0077c8; /* Azul uruguayo */
+}
+
+p {
+    font-size: 1.1em;
+    margin-bottom: 1.5em;
+}
+
+ul {
+    list-style: disc;
+    margin-left: 2em;
+}
+
+li {
+    margin-bottom: 0.8em;
+    font-size: 1.1em;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background-color: #0077c8; /* Azul uruguayo */
+    color: white;
+    margin-top: 2em;
+}
+
+/* Estilo para el contenedor de la grilla */
+.grid-container {
+    display: grid; /* Activa el diseño de grilla */
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas por defecto */
+    gap: 20px; /* Espacio entre los elementos */
+    padding: 20px; /* Agrega un padding dentro de la sección */
+    max-width: 1200px; /* Máximo ancho para centrar la grilla en la página */
+    margin: 0 auto; /* Centra la grilla horizontalmente */
+}
+
+/* Estilo para cada ítem de la grilla */
+.grid-item {
+    background-color: #0077c8; /* Fondo azul */
+    color: white; /* Texto blanco */
+    text-align: center;
+    padding: 20px; /* Espacio interno dentro de cada ítem */
+    border-radius: 8px; /* Bordes redondeados */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombra para dar efecto de tarjeta */
+    transition: transform 0.3s, box-shadow 0.3s; /* Animación para efecto hover */
+}
+
+.grid-item:hover {
+    transform: translateY(-5px); /* Eleva la tarjeta al pasar el mouse */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2); /* Incrementa la sombra */
+}
+
+.grid-item a {
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: white; /* Asegura que el texto del enlace sea blanco */
+    font-weight: bold; /* Hace el texto del enlace más visible */
+    font-size: 18px; /* Ajusta el tamaño del texto */	
+}
+
+.grid-item a:hover {
+    text-decoration: underline; /* Subraya el enlace al pasar el mouse */
+}
+
+/* Media Queries - Diseño Responsivo */
+
+/* Punto de cambio para tablets */
+/* Justificación: Cambiamos a 2 columnas para pantallas medianas como tablets */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    }
+}
+
+/* Punto de cambio para celulares */
+/* Justificación: Cambiamos a 1 columna para pantallas pequeñas como celulares */
+@media (max-width: 768px) {
+    .grid-container {
+        grid-template-columns: 1fr; /* 1 columna */
+    }
+
+    .grid-item {
+        padding: 15px; /* Reduce el padding para aprovechar mejor el espacio */
+    }
+}
